@@ -1,0 +1,58 @@
+.input {
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    @include respond(tab-port) {
+        font-size: 1rem;
+    }
+    &--place--section-navigation {
+        padding: 2rem 1rem;
+        
+        @include respond(tab-port) {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            right: 25%;
+            top: 0;
+            transform: translateY(-100%);
+            border-radius: 5px;
+            background-color: $badge-bg;
+            padding: 1rem 1rem 2rem 1rem;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 95% 70%, 0% 70%, 0 0);
+            transition: all .3s;
+        }
+        @include respond(phone) {
+            position: static;
+            visibility: visible;
+            opacity: 1;
+            clip-path: none;
+            background-color: #fff;
+            transform: none;
+            padding: 1.5rem 0rem 1.5rem 2rem;
+        }
+        &::placeholder {
+            color: $blue-gray;
+        }
+    }
+    &--filter {
+        padding: 1rem 2rem;
+        border-radius: 30px;
+        background-color: #EFF2F7;
+        width: 7rem;
+        @include respond(tab-land) {
+            padding: .8rem 1rem;
+        }
+
+        @include respond(tab-port) {
+            padding: .5rem 1rem;
+        }
+    }
+
+    &--word-filter {
+    }
+
+    &--range-filter {
+        width: 4.5rem;
+    }
+
+}

@@ -1,0 +1,25 @@
+include ../mixins/navbar.pug
+include ../mixins/social_icon.pug
+
+-
+    const footerNav = ['home', 'shop', 
+                        'team', 'about us', 'contacts'];
+    const icon = ['twitter-icon.svg', 'facebook-icon.svg', 'g--icon.svg']
+
+footer.section-footer 
+    .container.container--place--section-footer 
+        a(href="#").logo.logo--place--footer
+            img(src="/assets/img/logo/portland-footer-logo.svg", alt="").logo__icon
+            //- svg.logo__icon
+            //-     use(xlink:href="/assets/img/logo/portland.svg#tf3la")
+            //- object(data="/assets/img/logo/portland.svg", type="image/svg+xml", class="logo__icon") 
+        +navigation("--place--section-footer", ...footerNav)
+        +iconList(...icon)
+    .container.container--place--section-footer 
+        span.section-footer__text.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, accusamus! Et deleniti quae voluptas veniam, molestias, tenetur illo odit minima, accusantium nulla qui odio ipsum.
+        .section-footer__copyright 
+            a(href="#").section-footer__copyright-link.
+                privacy policy
+            a(href="#").section-footer__copyright-link.
+                terms and conditions

@@ -1,0 +1,12 @@
+.section-products {
+    width: 75%;
+    margin-top: $gap-desktop;
+    overflow: hidden;
+    @include respond(tab-land){
+        margin-top: $gap-tab-land;
+    }
+    @include respond(tab-port) {
+        width: 67%;
+        margin-top: $gap-tab-port;
+    }
+}

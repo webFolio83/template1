@@ -1,0 +1,10 @@
+include ./check_box
+mixin filterList(..element)
+    .filter-block
+        each item in element
+            +checkBox(item.id, item.title)
+        //-     ul.filter-list 
+        //-         each list in element
+        //-             li.filter-list__item
+        //-                 .check-box 
+        //-                 a(href="#").filter-list__item-title= list

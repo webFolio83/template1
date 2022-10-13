@@ -1,0 +1,15 @@
+include ../mixins/navbar.pug
+
+- const navMenu = ['top sales', 'brand focus', 'hi-tech', 'best sellers', 'projects'];
+
+section.section-navigation
+    .container.container--place--section-navigation
+        +navigation('--place--section-navigation', ...navMenu)
+        .section-navigation__help-block 
+            .section-navigation__support
+                a(href="#").section-navigation__support-link.link
+            .section-navigation__search
+                a(href="#").section-navigation__search-logo
+                //- img(src="assets/img/icons/prev-icon.svg", alt="search-logo", srcset="").header-navigation__search-logo
+                input(type="text", placeholder="i'm looking for...", class="input input--place--section-navigation")
+                

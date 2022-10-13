@@ -1,0 +1,109 @@
+include ../mixins/accordion.pug
+include ../mixins/filter_list.pug
+-
+    const accordionData = [
+        {
+            title : 'top sales',
+            list : ['value1', 'value2', 'value3']
+        },
+        {
+            title : 'brand focus',
+            list : ['value1', 'value2', 'value3']
+        },
+        {
+            title : 'hi-tech',
+            list : ['cell phones', 'cameras', 'computers', 'tv, audio', 'video games']
+        },
+        {
+            title : 'home',
+            list : ['value1', 'value2', 'value3']
+        },
+        {
+            title : 'sale',
+            list : ['value1', 'value2', 'value3']
+        }
+    ];
+    const filterListData = [
+        {
+            title : 'available',
+            list : [
+                {
+                    id: 'check-box-in-storage',
+                    title: 'in storage',
+                    counter: '45'
+                },
+                {
+                    id: 'check-box-online-shop',
+                    title: 'in online-shop',
+                    counter: '12'
+                } ]
+        },
+        {
+            title : 'brands',
+            titleLink: 'all',
+            list : [
+                {
+                    id: 'check-box-apple',
+                    title: 'apple',
+                    counter: '32'
+                },
+                {
+                    id: 'check-box-jbl',
+                    title: 'jbl',
+                    counter: '14'
+                } , 
+                {
+                    id: 'check-box-bose',
+                    title: 'bose',
+                    counter: '3'
+                },
+                {
+                    id: 'check-box-nest',
+                    title: 'nest',
+                    counter: '5'
+                } 
+            ]
+        },
+        {
+            title : 'condition',
+            titleLink: 'see all',
+            list : [
+                {
+                    id: 'check-box-new',
+                    title: 'new'
+                }, 
+                {
+                    id: 'check-box-manufacturer-refabrished',
+                    title: 'manufacturer refabrished'
+                },
+                {
+                    id: 'check-box-seller-refubrished',
+                    title: 'seller refubrished'
+                }, 
+                {
+                    id: 'check-box-used',
+                    title: 'used'
+                },
+                {
+                    id: 'check-box-for-parts-or-not-working',
+                    title: 'for parts or not working'
+                }
+            ]
+        }
+    ]
+
+.sidebar-section
+    .sidebar-section__container
+        +accordion(...accordionData)
+    each item in filterListData
+        .sidebar-section__container
+            .filter-block
+                .filter-block__title-block
+                    h3.filter-block__title= item.title
+                    if item.titleLink
+                        a(href="#").filter-block__title-link= item.titleLink
+                ul.filter-block__list 
+                    each el in item.list
+                        li.filter-block__list-item.filter-block__list-item
+                             +checkBox(el.id, el.title, '--square')
+                             span.filter-block__item-counter= el.counter

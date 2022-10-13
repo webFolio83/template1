@@ -1,0 +1,84 @@
+include ../mixins/card.pug
+include ../mixins/card_big.pug
+
+-
+    const cardsData = [
+        {
+            pic : 'apple-tv.jpg',
+            title : 'Apple TV 32GB',
+            color : 'black',
+            price : '$49.99'
+        },
+        {
+            pic : 'watch.jpg',
+            title : 'Pebble Time',
+            color : 'red',
+            price : '$29.99'
+        },
+        {
+            pic : 'zendure.jpg',
+            title : 'Zendure 4-Port USB',
+            color : 'white',
+            price : '$49.99'
+        },
+        {
+            pic : 'analyzer.jpg',
+            title : 'Withins Smart Body Analyzer WS-50',
+            color : 'black',
+            price : '$39.99'
+        },
+        {
+            pic : 'ollo.jpg',
+            title : 'Ollo Clip New',
+            color : 'silver',
+            price : '$19.99',
+        },
+        {
+            pic : 'jbl-bg.jpg',
+            title : 'JBL Charge 2+',
+            color : 'black',
+            price : '$39.99',
+            spec: {
+                title : '16GB',
+                list : ['16GB', '32GB']
+            }
+        },
+        {
+            pic : 'tracker.jpg',
+            title : 'Fitbit Charge HR Heart Rate and Activity Tracker',
+            color : 'black',
+            price : '$19.99',
+        },
+        {
+            pic : 'apple-watch.jpg',
+            title : 'Apple Watch Sport 38mm Silver Aluminium Case',
+            color : 'white',
+            price : '$49.99',
+        },
+        {
+            pic : 'headphones.jpg',
+            title : 'Bose SoundLink On-Ear Headphones',
+            color : 'white',
+            price : '$119.99',
+        },
+        {
+            pic : 'hifi.jpg',
+            title : 'Sonos Play-1 Wireless HiFi System',
+            color : 'black',
+            price : '$99.99',
+        },
+        {
+            pic : 'thermostat-bg.jpg',
+            title : 'Nest Learning Thermostat 3rd Generation',
+            color : 'black',
+            price : '$49.99',
+        }
+    ]
+section.section-products 
+    .container.container--place--section-products
+        each item in cardsData
+            if item.spec 
+                +cardBig(item)
+            else 
+                +card(item)
+

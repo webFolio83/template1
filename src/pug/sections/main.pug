@@ -1,0 +1,177 @@
+include ../mixins/card.pug
+include ../mixins/card_big.pug
+include ../mixins/accordion.pug
+include ../mixins/filter_list.pug
+
+-
+    const cardsData = [
+        {
+            pic : 'apple-tv.jpg',
+            title : 'Apple TV 32GB',
+            color : 'black',
+            price : '$49.99'
+        },
+        {
+            pic : 'watch.jpg',
+            title : 'Pebble Time',
+            color : 'red',
+            price : '$29.99'
+        },
+        {
+            pic : 'zendure.jpg',
+            title : 'Zendure 4-Port USB',
+            color : 'white',
+            price : '$49.99'
+        },
+        {
+            pic : 'analyzer.jpg',
+            title : 'Withins Smart Body Analyzer WS-50',
+            color : 'black',
+            price : '$39.99'
+        },
+        {
+            pic : 'ollo.jpg',
+            title : 'Ollo Clip New',
+            color : 'silver',
+            price : '$19.99',
+        },
+        {
+            pic : 'jbl-bg.jpg',
+            title : 'JBL Charge 2+',
+            color : 'black',
+            price : '$39.99',
+            spec: {
+                title : '16GB',
+                list : ['16GB', '32GB']
+            }
+        },
+        {
+            pic : 'tracker.jpg',
+            title : 'Fitbit Charge HR Heart Rate and Activity Tracker',
+            color : 'black',
+            price : '$19.99',
+        },
+        {
+            pic : 'apple-watch.jpg',
+            title : 'Apple Watch Sport 38mm Silver Aluminium Case',
+            color : 'white',
+            price : '$49.99',
+        },
+        {
+            pic : 'headphones.jpg',
+            title : 'Bose SoundLink On-Ear Headphones',
+            color : 'white',
+            price : '$119.99',
+        },
+        {
+            pic : 'hifi.jpg',
+            title : 'Sonos Play-1 Wireless HiFi System',
+            color : 'black',
+            price : '$99.99',
+        },
+        {
+            pic : 'thermostat-bg.jpg',
+            title : 'Nest Learning Thermostat 3rd Generation',
+            color : 'black',
+            price : '$49.99',
+        }
+    ];
+    const accordionData = [
+        {
+            title : 'top sales',
+            list : ['value1', 'value2', 'value3']
+        },
+        {
+            title : 'brand focus',
+            list : ['value1', 'value2', 'value3']
+        },
+        {
+            title : 'hi-tech',
+            list : ['cell phones', 'cameras', 'computers', 'tv, audio', 'video games']
+        },
+        {
+            title : 'home',
+            list : ['value1', 'value2', 'value3']
+        },
+        {
+            title : 'sale',
+            list : ['value1', 'value2', 'value3']
+        }
+    ];
+    const filterListData = [
+        {
+            title : 'available',
+            list : [
+                {
+                    id: 'check-box-in-storage',
+                    title: 'in storage',
+                    counter: '45'
+                },
+                {
+                    id: 'check-box-online-shop',
+                    title: 'in online-shop',
+                    counter: '12'
+                } ]
+        },
+        {
+            title : 'brands',
+            titleLink: 'all',
+            list : [
+                {
+                    id: 'check-box-apple',
+                    title: 'apple',
+                    counter: '32'
+                },
+                {
+                    id: 'check-box-jbl',
+                    title: 'jbl',
+                    counter: '14'
+                } , 
+                {
+                    id: 'check-box-bose',
+                    title: 'bose',
+                    counter: '3'
+                },
+                {
+                    id: 'check-box-nest',
+                    title: 'nest',
+                    counter: '5'
+                } 
+            ]
+        },
+        {
+            title : 'condition',
+            titleLink: 'see all',
+            list : [
+                {
+                    id: 'check-box-new',
+                    title: 'new'
+                }, 
+                {
+                    id: 'check-box-manufacturer-refabrished',
+                    title: 'manufacturer refabrished'
+                },
+                {
+                    id: 'check-box-seller-refubrished',
+                    title: 'seller refubrished'
+                }, 
+                {
+                    id: 'check-box-used',
+                    title: 'used'
+                },
+                {
+                    id: 'check-box-for-parts-or-not-working',
+                    title: 'for parts or not working'
+                }
+            ]
+        }
+    ]
+    
+section.section-main
+    .container.container--products
+    .container.container--products
+        each item in cardsData
+            if item.spec 
+                +cardBig(item)
+            else 
+                +card(item)

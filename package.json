@@ -1,0 +1,13 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ../node_modules/gulp-cli/bin/gulp start",
+    "clean": "node ../node_modules/gulp-cli/bin/gulp clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,27 @@
+.section-promo {
+    margin-top: $gap-desktop;
+    @include respond(tab-land) {
+        margin-top: $gap-tab-land;
+    }
+
+    @include respond(tab-port) {
+        margin-top: $gap-tab-port;
+    }
+    &__header {
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba($nav-color, .6);
+        @include respond(tab-land) {
+            font-size: 1.2rem;
+        }
+        
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}

@@ -1,0 +1,13 @@
+include ./fd_list.pug
+mixin cardBig(data)
+    .card-big
+        img(src="/assets/img/products/"+ data.pic, alt="").card-big__picture
+        span.card-big__price= data.price
+        .card-big__description
+            .card-big__data-container
+                h4.card-big__title= data.title 
+                span.card-big__color= data.color
+            .card-big__data-container
+                +fdList(...data.spec.list)
+                button.button.card-big__button.
+                    buy now

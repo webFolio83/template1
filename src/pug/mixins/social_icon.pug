@@ -1,0 +1,9 @@
+mixin iconList(...list)
+    ul.icon-list
+        each pic in list
+            li.icon-list__item
+                a(href="#").icon-list__link
+                    object(data="/assets/img/icons/map.svg", type="image/svg+xml", class="icon-list__icon") 
+                //- svg.icon-list__icon
+                //-     use(xlink:href="/assets/img/icons/map.svg#map")
+                    //- img(src="/assets/img/icons/"+ pic, alt="").icon-list__icon

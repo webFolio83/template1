@@ -1,0 +1,69 @@
+.fd-list {
+    display: flex;
+    align-items: center;
+    &__active{
+        position: relative;
+        cursor: pointer;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        &::after {
+            content: "\003E";
+            display: inline-block;
+            margin-left: .5rem;
+            transform: rotateZ(90deg);
+            transition: all .4s;
+            @include respond(tab-port) {
+                margin-left: 0;
+            }
+        }
+        
+        &:hover::after {
+            transform: rotateZ(270deg);
+        }
+    }
+
+    &__active:hover &__item {
+        visibility: visible;
+        opacity: 1;
+        height: 100%;
+        transform: scale(1);
+    }
+
+    &__list {
+        position: absolute;
+        left: 0;
+        list-style: none;     
+        min-width: 100%;
+        color: $nav-color;
+        z-index: 100;
+    }
+
+    &__item {      
+        background-color: #fff;
+        transition: all .3s;
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(1.1);
+        
+    }
+
+    &__link{
+        &:link, &:visited {
+            text-decoration: none;
+            display: block;
+            color: currentColor;
+            width: 100%;
+            padding-top: 1rem;
+            padding-left: .5rem;
+            padding-right: 0.5rem;
+            transition: all .3s;
+        }
+        &:hover {
+            color: $dark-blue !important;
+        }
+    }
+    &__item:hover &__link{
+        color: $nav-color;
+    }
+
+}

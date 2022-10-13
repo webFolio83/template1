@@ -1,0 +1,44 @@
+.cart {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: .55px;
+    cursor: pointer;
+
+    &:hover &__icon {
+        transform: rotateZ(-10deg);
+    }
+    &:hover &__title {
+        color: $nav-color;
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        transition: all .3s;
+        @include respond(tab-port) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    &__title {  
+        text-transform: uppercase;
+        transition: all .3s;
+        @include respond(tab-port) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__counter {
+        border-radius: 100%;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-color: $badge-bg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

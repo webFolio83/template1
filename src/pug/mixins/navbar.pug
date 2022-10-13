@@ -1,0 +1,7 @@
+mixin navigation (modificator, ...title)
+    //- nav(class="navigation navigation--" + modificator)
+    //- ul.navigation-list&attributes(attributes)
+    ul(class="navigation-list navigation-list"+ modificator)
+        each item in title 
+            li.navigation-list__item
+                a(href="#").navigation-list__link= item

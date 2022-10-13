@@ -1,0 +1,8 @@
+mixin cardStory(data)
+    .card-story
+        .card-story__person-box
+            img(src="/assets/img/users/"+ data.pic, alt="").card-story__picture
+            .card-story__name-rank
+                h4.card-story__name= data.name
+                span.card-story__rank= data.rank
+        p.card-story__paragraph= data.story

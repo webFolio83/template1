@@ -1,0 +1,24 @@
+.word-filter {
+    display: flex;
+    gap: 1rem;
+    @include respond(tab-port) {
+        gap: .2rem;
+    }
+    &__title {
+        margin: auto;
+    }
+    &__input {
+        outline: none;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 30px;
+        background-color: #EFF2F7;
+
+        @include respond(tab-land) {
+            padding: .8rem 1rem;
+        }
+        &::placeholder {
+            color: $nav-color;
+        }
+    }
+}

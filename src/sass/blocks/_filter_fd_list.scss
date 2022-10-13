@@ -1,0 +1,29 @@
+.fd-filter-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include respond(tab-land) {
+        gap: .5rem;
+    }
+
+    &__icon {
+        display: none;
+        @include respond(tab-port) {
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    &__title {
+        margin: auto;
+        color: $nav-color;
+        white-space: nowrap;
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    
+}

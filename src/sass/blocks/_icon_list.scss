@@ -1,0 +1,21 @@
+.icon-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    &__link {
+        &:link, &:visited {
+            
+        }
+        &:hover .icon-list__icon {
+            filter: brightness(.7);
+            transform: scale(1.1);
+        }
+    }
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        filter: invert(.5);
+        transition: all .3s;
+    }
+}

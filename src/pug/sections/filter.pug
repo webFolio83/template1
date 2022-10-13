@@ -1,0 +1,28 @@
+include ../mixins/fd_list.pug
+include ../mixins/filter_fd_list.pug
+include ../mixins/range_filter.pug
+include ../mixins/check_box.pug
+-
+    const fd_menu = [
+        {
+            title: 'sort by:', 
+            icon: 'key.svg',
+            list: ['low price', 'high price', 'best match']
+        }, 
+        {
+            title: 'ship to:', 
+            icon: 'location-pin.svg',
+            list: ['mexico', 'usa', 'gb']
+        }
+    ]
+
+section.section-filter
+    .container.container--place--section-filter
+        +filterFdList(fd_menu[0].title, fd_menu[0].icon, ...fd_menu[0].list)
+        .word-filter
+            span.word-filter__title.
+                keywords
+            input(type="text", name="keyword", placeholder="Tablet").input.input--filter.input--word-filter
+        +rangeFilter('price', '10', '1000')
+        +checkBox('freeshipping', 'free shipping', '--round')
+        +filterFdList(fd_menu[1].title, fd_menu[1].icon, ...fd_menu[1].list)

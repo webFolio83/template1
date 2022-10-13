@@ -1,0 +1,7 @@
+include fd_list
+
+mixin filterFdList(title, iconSrc, ...list)
+    .fd-filter-list
+        img(src="/assets/img/icons/" + iconSrc, alt="icon", srcset="").fd-filter-list__icon
+        span.fd-filter-list__title= title
+        +fdList(...list)

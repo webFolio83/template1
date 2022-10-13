@@ -1,0 +1,21 @@
+.section-header {
+    // grid-column: 1 / -1;
+    background-color: #fff;
+    padding: 3rem 0;
+    border-bottom: 1px solid $divider-color;
+    
+    @include respond(tab-port) {
+        padding: 1.5rem 0;
+    }
+    @include respond(phone) {
+        padding: 1rem 0;
+    }
+
+    &__info-block {
+        display: flex;
+        gap: 3rem;
+        @include respond(tab-land) {
+            gap: 1rem;
+        }
+    }
+}

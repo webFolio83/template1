@@ -1,0 +1,7 @@
+mixin product-card(imgSrc, title, color, price)
+    .product-card 
+        figure.product-card__shape
+            img(src="assets/img/products/" + imgSrc, alt="apple-tv").product-card__img
+            figcaption.product-card__title= title
+        span.product-card__color= color
+        span.product-card__price= price

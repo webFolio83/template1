@@ -1,0 +1,51 @@
+.section-footer {
+    grid-column: 1 / -1;
+    background-color: #212327;
+    color: #fff;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        border-bottom: 1px solid rgba($nav-color, .6);
+    }
+
+    &__text {
+        flex: 0 1 40%;
+        color: rgba($nav-color, .6);
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        font-style: italic;
+        line-height: 2;
+        @include respond(tab-port) {
+            text-align: center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        &-link {
+            &:link, &:visited {
+                color: rgba($nav-color, .6);
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 1rem 0;
+                transition: all .3s;
+            }
+
+            &:hover {
+                color: rgba($nav-color, .9);
+                transform: scale(1.05);
+            }
+        }
+    }
+}

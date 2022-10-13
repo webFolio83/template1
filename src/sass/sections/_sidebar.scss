@@ -1,0 +1,32 @@
+.sidebar-section {
+    // grid-column-start: content-start;
+    // @include respond(tab-land) {
+    //     grid-column-start: 1;
+    // }
+    width: 25%;
+    padding-right: 3rem;
+    margin-top: $gap-desktop;
+
+    @include respond(tab-land) {
+        padding-right: 1.5rem;
+        margin-top: $gap-tab-land;
+    }
+    @include respond(tab-port) {
+        width: 33%;
+        padding-right: .5rem;
+        margin-top: $gap-tab-port;
+    }
+    &__container {
+        background-color: #fff;
+        border-radius: 5px;
+        &:not(:first-child) {
+            margin-top: 3rem;
+            @include respond(tab-land) {
+                margin-top: $gap-tab-land;
+            }
+            @include respond(tab-port) {
+                margin-top: $gap-tab-port;
+            }
+        }
+    }
+}

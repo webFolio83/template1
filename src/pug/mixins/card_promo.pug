@@ -1,0 +1,8 @@
+mixin cardPromo(data)
+    .card-promo
+        img(src="/assets/img/best-sellers/"+ data.pic, alt="").card-promo__picture
+        h4.card-promo__title= data.title 
+        span.card-promo__color= data.color 
+        .card-promo__price-box
+            span.card-promo__regular-price= data.regularPrice
+            span.card-promo__promo-price= data.promoPrice

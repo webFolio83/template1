@@ -1,0 +1,39 @@
+include ../mixins/card_promo.pug
+-
+    const bestSellerData = [
+        {
+            pic: 'photo-1.png',
+            title: 'Beanie',
+            color: 'green',
+            regularPrice: '$39.99',
+            promoPrice: '$29.99'
+        },
+        {
+            pic: 'photo-2.png',
+            title: 't-short with a print',
+            color: 'dark blue',
+            regularPrice: '$29.99',
+            promoPrice: '$19.99'
+        },
+        {
+            pic: 'photo-3.png',
+            title: 'pipe-lined hooded jacket',
+            color: 'dark blue',
+            regularPrice: '$49.99',
+            promoPrice: '$39.99'
+        },
+        {
+            pic: 'photo-4.png',
+            title: 'trainers',
+            color: 'space gray',
+            regularPrice: '$39.99',
+            promoPrice: '$29.99'
+        }
+    ]
+section.section-promo 
+    .container.container--place--section-promo
+        h2.section-promo__header.
+            best sellers
+        .section-promo__cards
+            each card in bestSellerData
+                +cardPromo(card)

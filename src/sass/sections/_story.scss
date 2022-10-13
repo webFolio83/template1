@@ -1,0 +1,57 @@
+.section-story {
+    background-color: #fff;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-top: $gap-desktop;
+    @include respond(tab-land) {
+        margin-top: $gap-tab-land;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    @include respond(tab-port) {
+        margin-top: $gap-tab-port;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    &__header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        margin-bottom: 6rem;
+        @include respond(tab-land) {
+            margin-bottom: 3rem;
+        }
+    
+        @include respond(tab-port) {
+            margin-bottom: 2rem;
+        }
+        &-primary {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        &-secondary {
+            color: $nav-color;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        @include respond(tab-land) {
+            gap: 2rem;
+        }
+        @include respond(tab-port) {
+            gap: 1rem;
+        }
+        @include respond(phone) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

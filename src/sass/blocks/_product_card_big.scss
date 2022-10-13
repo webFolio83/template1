@@ -1,0 +1,79 @@
+.card-big {
+    display: flex;
+    grid-column: span 2;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    background-color: #fff;
+    position: relative;
+    font-size: 1.4rem;
+    height: $height-product-card-desktop;
+    border-radius: 5px;
+    overflow: hidden;
+    @include respond(tab-land) {
+        height: $height-product-card-tab-land;
+    }
+
+    &__picture {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+    &__price {
+        position: absolute;
+        padding: .7rem;
+        left: 1rem;
+        top: 1rem;
+        background-color: rgba(black, .5);
+        color: #fff;
+        letter-spacing: 1px;
+        border-radius: 3px;
+        @include respond(tab-land) {
+            font-size: 1.2rem;
+        }
+        @include respond(tab-port) {
+            font-size: 1rem;
+        }
+
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.4rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 2rem;
+    }
+
+    &__data-container {
+        display: flex;
+        &:first-child {
+            flex-direction: column;
+            
+        }
+    }
+
+    &__color {
+        color: $nav-color;
+        text-transform: uppercase;
+        padding-top: 1.5rem;
+    }
+
+    .button {
+        background-color: $gray-bg;
+        padding: 1rem 3rem;
+        border-left: 1px solid $nav-color;
+        border-radius: 0 2rem 2rem 0;
+    }
+
+    .fd-menu {
+        background-color: $gray-bg;
+        padding-right: 1rem;
+        padding-left: 3rem;
+        border-right: 1px solid $nav-color;
+        border-radius: 2rem 0 0 2rem;
+    }
+}

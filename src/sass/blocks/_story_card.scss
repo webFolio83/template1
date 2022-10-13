@@ -1,0 +1,49 @@
+.card-story {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: #fff;
+    font-size: 1.4rem;
+    @include respond(tab-port) {
+        padding: 1rem;
+    }
+    @include respond(phone) {
+        // width: 50vw;
+        padding-left: 25vw;
+        padding-right: 25vw;
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba($nav-color, .6);
+        }
+    }
+    &__person-box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
+    &__name-rank {
+        white-space: nowrap;
+    }
+    &__name {
+        text-transform: capitalize;
+        letter-spacing: .5px;
+        margin-bottom: .5rem;
+    }
+    &__rank {
+        font-style: italic;
+        color: $nav-color;
+        letter-spacing: 1px;
+    }
+
+    &__picture {
+        width: 4rem;
+        height: 4rem;
+        object-fit: contain;
+    }
+
+    &__paragraph {
+        margin-top: 2rem;
+        // padding-right: 30%;
+    }
+}

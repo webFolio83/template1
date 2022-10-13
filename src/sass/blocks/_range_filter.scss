@@ -1,0 +1,17 @@
+.range-filter {
+    display: flex;
+
+    &__title {
+        margin: auto;
+        padding-right: 1rem;
+        color: $nav-color;
+        @include respond(tab-port) {
+            padding-right: .2rem;
+        }
+    }
+
+    &__divider {
+        margin: auto;
+        padding: 0 .5rem;
+    }
+}

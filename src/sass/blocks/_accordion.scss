@@ -1,0 +1,72 @@
+.accordion {
+    list-style: none;
+    font-size: 1.4rem;
+    
+    &__title {
+        display: block;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 3rem;
+        &:link, &:visited {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: currentColor;
+        }
+        
+        position: relative;
+        
+        &::before {
+            content: "\003E";
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            transform: translateX(-2rem);
+            transition: all .3s;
+        }
+
+        &--active::before {
+            transform: rotateZ(90deg) translateY(2rem);
+        }
+    }
+    // &__title:hover + &__list &__list-item{
+    //     // height: 100%;
+    // }
+
+    &__title:hover + &__list &__list-link{
+        
+    }
+    &__title--active + &__list &__list-link {
+        height: 100%;
+        visibility: visible;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #DFE4ED;
+    }
+
+    &__list {
+        list-style: none;
+        background-color: #EFF2F7;
+        // transition: all 1s;
+    }
+    &__list-item {
+        display: block;
+        transition: all .4s;
+    }
+    &__list-link {
+        &:link, &:visited {
+            text-decoration: none;
+            color: $nav-color;
+            text-transform: uppercase;
+            display: block;
+            padding-left: 3rem;
+            visibility: hidden;
+            height: 0;
+            transition: all .3s;
+        }
+
+        &:hover {
+            color: $dark-blue;
+            transform: translateX(3px);
+        }
+    }
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+  </head>
+  <body> 
+    <div id="app"> 
+      <header class="section-header">
+        <div class="container container--place--section-header"><a class="logo logo--place--section-header" href="#"><img class="logo__icon" src="/assets/img/logo/portland.svg" alt=""></a>
+                <ul class="navigation-list navigation-list--place--section-header">
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">Home</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">Devices</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">About</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">Guarantee</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">Delivery &amp; payment</a></li>
+                </ul>
+          <div class="section-header__info-block">
+            <div class="cart"> <img class="cart__icon" src="./assets/img/icons/shopping-cart-icon.svg" alt="Cart"><span class="cart__title">Cart</span><span class="cart__counter">0</span></div>
+            <div class="login">
+              <button class="button button--login">Sign in</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="section-navigation">
+        <div class="container container--place--section-navigation">
+                <ul class="navigation-list navigation-list--place--section-navigation">
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">top sales</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">brand focus</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">hi-tech</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">best sellers</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">projects</a></li>
+                </ul>
+          <div class="section-navigation__help-block"> 
+            <div class="section-navigation__support"><a class="section-navigation__support-link link" href="#"></a></div>
+            <div class="section-navigation__search"><a class="section-navigation__search-logo" href="#"></a>
+              <input class="input input--place--section-navigation" type="text" placeholder="i'm looking for...">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-filter">
+        <div class="container container--place--section-filter">
+                <div class="fd-filter-list"><img class="fd-filter-list__icon" src="/assets/img/icons/key.svg" alt="icon" srcset=""><span class="fd-filter-list__title">sort by:</span>
+                        <div class="fd-list">
+                          <div class="fd-list__active">high price
+                            <ul class="fd-list__list"> 
+                              <li class="fd-list__item"><a class="fd-list__link" href="#">low price</a></li>
+                              <li class="fd-list__item"><a class="fd-list__link" href="#">high price</a></li>
+                              <li class="fd-list__item"><a class="fd-list__link" href="#">best match</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                </div>
+          <div class="word-filter"><span class="word-filter__title">keywords</span>
+            <input class="input input--filter input--word-filter" type="text" name="keyword" placeholder="Tablet">
+          </div>
+                <div class="range-filter"><span class="range-filter__title">price</span>
+                  <input class="input input--filter input--range-filter" type="text" name="min" value="10"><span class="range-filter__divider">-</span>
+                  <input class="input input--filter input--range-filter" type="text" name="max" value="1000">
+                </div>
+                <div class="check-box check-box--round">
+                  <input class="check-box__input" type="checkbox" name="" id="freeshipping">
+                  <label class="check-box__label" for="freeshipping">free shipping</label>
+                </div>
+                <div class="fd-filter-list"><img class="fd-filter-list__icon" src="/assets/img/icons/location-pin.svg" alt="icon" srcset=""><span class="fd-filter-list__title">ship to:</span>
+                        <div class="fd-list">
+                          <div class="fd-list__active">usa
+                            <ul class="fd-list__list"> 
+                              <li class="fd-list__item"><a class="fd-list__link" href="#">mexico</a></li>
+                              <li class="fd-list__item"><a class="fd-list__link" href="#">usa</a></li>
+                              <li class="fd-list__item"><a class="fd-list__link" href="#">gb</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                </div>
+        </div>
+      </section>
+      <section class="section-main">
+        <div class="container container--place--section-main">
+          <div class="sidebar-section">
+            <div class="sidebar-section__container">
+                        <ul class="accordion">
+                          <li class="accordion__title-box"></li><a class="accordion__title" href="#">top sales</a>
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value1</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value2</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value3</a></li>
+                          </ul>
+                          <li class="accordion__title-box"></li><a class="accordion__title" href="#">brand focus</a>
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value1</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value2</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value3</a></li>
+                          </ul>
+                          <li class="accordion__title-box"></li><a class="accordion__title accordion__title--active" href="#">hi-tech</a>
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">cell phones</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">cameras</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">computers</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">tv, audio</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">video games</a></li>
+                          </ul>
+                          <li class="accordion__title-box"></li><a class="accordion__title" href="#">home</a>
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value1</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value2</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value3</a></li>
+                          </ul>
+                          <li class="accordion__title-box"></li><a class="accordion__title" href="#">sale</a>
+                          <ul class="accordion__list">
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value1</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value2</a></li>
+                            <li class="accordion__list-item"><a class="accordion__list-link" href="#">value3</a></li>
+                          </ul>
+                        </ul>
+            </div>
+            <div class="sidebar-section__container">
+              <div class="filter-block">
+                <div class="filter-block__title-block">
+                  <h3 class="filter-block__title">available</h3>
+                </div>
+                <ul class="filter-block__list"> 
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-in-storage">
+                                <label class="check-box__label" for="check-box-in-storage">in storage</label>
+                              </div><span class="filter-block__item-counter">45</span>
+                  </li>
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-online-shop">
+                                <label class="check-box__label" for="check-box-online-shop">in online-shop</label>
+                              </div><span class="filter-block__item-counter">12</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar-section__container">
+              <div class="filter-block">
+                <div class="filter-block__title-block">
+                  <h3 class="filter-block__title">brands</h3><a class="filter-block__title-link" href="#">all</a>
+                </div>
+                <ul class="filter-block__list"> 
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-apple">
+                                <label class="check-box__label" for="check-box-apple">apple</label>
+                              </div><span class="filter-block__item-counter">32</span>
+                  </li>
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-jbl">
+                                <label class="check-box__label" for="check-box-jbl">jbl</label>
+                              </div><span class="filter-block__item-counter">14</span>
+                  </li>
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-bose">
+                                <label class="check-box__label" for="check-box-bose">bose</label>
+                              </div><span class="filter-block__item-counter">3</span>
+                  </li>
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-nest">
+                                <label class="check-box__label" for="check-box-nest">nest</label>
+                              </div><span class="filter-block__item-counter">5</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar-section__container">
+              <div class="filter-block">
+                <div class="filter-block__title-block">
+                  <h3 class="filter-block__title">condition</h3><a class="filter-block__title-link" href="#">see all</a>
+                </div>
+                <ul class="filter-block__list"> 
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-new">
+                                <label class="check-box__label" for="check-box-new">new</label>
+                              </div><span class="filter-block__item-counter"></span>
+                  </li>
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-manufacturer-refabrished">
+                                <label class="check-box__label" for="check-box-manufacturer-refabrished">manufacturer refabrished</label>
+                              </div><span class="filter-block__item-counter"></span>
+                  </li>
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-seller-refubrished">
+                                <label class="check-box__label" for="check-box-seller-refubrished">seller refubrished</label>
+                              </div><span class="filter-block__item-counter"></span>
+                  </li>
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-used">
+                                <label class="check-box__label" for="check-box-used">used</label>
+                              </div><span class="filter-block__item-counter"></span>
+                  </li>
+                  <li class="filter-block__list-item filter-block__list-item">
+                              <div class="check-box check-box--square">
+                                <input class="check-box__input" type="checkbox" name="" id="check-box-for-parts-or-not-working">
+                                <label class="check-box__label" for="check-box-for-parts-or-not-working">for parts or not working</label>
+                              </div><span class="filter-block__item-counter"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <section class="section-products"> 
+            <div class="container container--place--section-products">
+                        <div class="card"> <img class="card__picture" src="/assets/img/products/apple-tv.jpg" alt="">
+                          <div class="card__description">
+                            <h4 class="card__title">Apple TV 32GB</h4><span class="card__color">black</span><span class="card__price">$49.99</span>
+                          </div>
+                        </div>
+                        <div class="card"> <img class="card__picture" src="/assets/img/products/watch.jpg" alt="">
+                          <div class="card__description">
+                            <h4 class="card__title">Pebble Time</h4><span class="card__color">red</span><span class="card__price">$29.99</span>
+                          </div>
+                        </div>
+                        <div class="card"> <img class="card__picture" src="/assets/img/products/zendure.jpg" alt="">
+                          <div class="card__description">
+                            <h4 class="card__title">Zendure 4-Port USB</h4><span class="card__color">white</span><span class="card__price">$49.99</span>
+                          </div>
+                        </div>
+                        <div class="card"> <img class="card__picture" src="/assets/img/products/analyzer.jpg" alt="">
+                          <div class="card__description">
+                            <h4 class="card__title">Withins Smart Body Analyzer WS-50</h4><span class="card__color">black</span><span class="card__price">$39.99</span>
+                          </div>
+                        </div>
+                        <div class="card"> <img class="card__picture" src="/assets/img/products/ollo.jpg" alt="">
+                          <div class="card__description">
+                            <h4 class="card__title">Ollo Clip New</h4><span class="card__color">silver</span><span class="card__price">$19.99</span>
+                          </div>
+                        </div>
+                        <div class="card-big"><img class="card-big__picture" src="/assets/img/products/jbl-bg.jpg" alt=""><span class="card-big__price">$39.99</span>
+                          <div class="card-big__description">
+                            <div class="card-big__data-container">
+                              <h4 class="card-big__title">JBL Charge 2+</h4><span class="card-big__color">black</span>
+                            </div>
+                            <div class="card-big__data-container">
+                                        <div class="fd-list">
+                                          <div class="fd-list__active">32GB
+                                            <ul class="fd-list__list"> 
+                                              <li class="fd-list__item"><a class="fd-list__link" href="#">16GB</a></li>
+                                              <li class="fd-list__item"><a class="fd-list__link" href="#">32GB</a></li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                              <button class="button card-big__button">buy now</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card"> <img class="card__picture" src="/assets/img/products/tracker.jpg" alt="">
+                          <div class="card__description">
+                            <h4 class="card__title">Fitbit Charge HR Heart Rate and Activity Tracker</h4><span class="card__color">black</span><span class="card__price">$19.99</span>
+                          </div>
+                        </div>
+                        <div class="card"> <img class="card__picture" src="/assets/img/products/apple-watch.jpg" alt="">
+                          <div class="card__description">
+                            <h4 class="card__title">Apple Watch Sport 38mm Silver Aluminium Case</h4><span class="card__color">white</span><span class="card__price">$49.99</span>
+                          </div>
+                        </div>
+                        <div class="card"> <img class="card__picture" src="/assets/img/products/headphones.jpg" alt="">
+                          <div class="card__description">
+                            <h4 class="card__title">Bose SoundLink On-Ear Headphones</h4><span class="card__color">white</span><span class="card__price">$119.99</span>
+                          </div>
+                        </div>
+                        <div class="card"> <img class="card__picture" src="/assets/img/products/hifi.jpg" alt="">
+                          <div class="card__description">
+                            <h4 class="card__title">Sonos Play-1 Wireless HiFi System</h4><span class="card__color">black</span><span class="card__price">$99.99</span>
+                          </div>
+                        </div>
+                        <div class="card"> <img class="card__picture" src="/assets/img/products/thermostat-bg.jpg" alt="">
+                          <div class="card__description">
+                            <h4 class="card__title">Nest Learning Thermostat 3rd Generation</h4><span class="card__color">black</span><span class="card__price">$49.99</span>
+                          </div>
+                        </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="section-pagination"> 
+        <div class="container container--place--section-pagination">
+          <button class="button button--pagination"></button>
+          <ul class="pagination-list"> 
+            <li class="pagination-list__item"></li><a class="pagination-list__link" href="#">1</a>
+            <li class="pagination-list__item"></li><a class="pagination-list__link" href="#">2</a>
+            <li class="pagination-list__item"></li><a class="pagination-list__link" href="#">3</a>
+            <li class="pagination-list__item"></li><a class="pagination-list__link" href="#">4</a>
+            <li class="pagination-list__item"></li><a class="pagination-list__link" href="#">5</a>
+            <li class="pagination-list__item"></li><a class="pagination-list__link" href="#">6</a>
+            <li class="pagination-list__item"></li><a class="pagination-list__link" href="#">7</a>
+            <li class="pagination-list__item"></li><a class="pagination-list__link" href="#">8</a>
+          </ul>
+          <button class="button button--pagination"></button>
+        </div>
+      </section>
+      <section class="section-promo"> 
+        <div class="container container--place--section-promo">
+          <h2 class="section-promo__header">best sellers</h2>
+          <div class="section-promo__cards">
+                  <div class="card-promo"><img class="card-promo__picture" src="/assets/img/best-sellers/photo-1.png" alt="">
+                    <h4 class="card-promo__title">Beanie</h4><span class="card-promo__color">green</span>
+                    <div class="card-promo__price-box"><span class="card-promo__regular-price">$39.99</span><span class="card-promo__promo-price">$29.99</span></div>
+                  </div>
+                  <div class="card-promo"><img class="card-promo__picture" src="/assets/img/best-sellers/photo-2.png" alt="">
+                    <h4 class="card-promo__title">t-short with a print</h4><span class="card-promo__color">dark blue</span>
+                    <div class="card-promo__price-box"><span class="card-promo__regular-price">$29.99</span><span class="card-promo__promo-price">$19.99</span></div>
+                  </div>
+                  <div class="card-promo"><img class="card-promo__picture" src="/assets/img/best-sellers/photo-3.png" alt="">
+                    <h4 class="card-promo__title">pipe-lined hooded jacket</h4><span class="card-promo__color">dark blue</span>
+                    <div class="card-promo__price-box"><span class="card-promo__regular-price">$49.99</span><span class="card-promo__promo-price">$39.99</span></div>
+                  </div>
+                  <div class="card-promo"><img class="card-promo__picture" src="/assets/img/best-sellers/photo-4.png" alt="">
+                    <h4 class="card-promo__title">trainers</h4><span class="card-promo__color">space gray</span>
+                    <div class="card-promo__price-box"><span class="card-promo__regular-price">$39.99</span><span class="card-promo__promo-price">$29.99</span></div>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-story">
+        <div class="container container--place--section-story">
+          <h2 class="section-story__header"><span class="section-story__header-primary">What Our Customers Have to Say </span><span class="section-story__header-secondary">Couple of Words About This Stories Section</span></h2>
+          <div class="section-story__cards"> 
+                  <div class="card-story">
+                    <div class="card-story__person-box"><img class="card-story__picture" src="/assets/img/users/user-1.png" alt="">
+                      <div class="card-story__name-rank">
+                        <h4 class="card-story__name">cella fields</h4><span class="card-story__rank">UX Expert</span>
+                      </div>
+                    </div>
+                    <p class="card-story__paragraph">This I have produced as a scantling of Jack's 
+                great eloquence and the force of his reasoning
+                upon such abstruse matters</p>
+                  </div>
+                  <div class="card-story">
+                    <div class="card-story__person-box"><img class="card-story__picture" src="/assets/img/users/user-2.png" alt="">
+                      <div class="card-story__name-rank">
+                        <h4 class="card-story__name">alexander lee</h4><span class="card-story__rank">Founder</span>
+                      </div>
+                    </div>
+                    <p class="card-story__paragraph">Looking for cautiously round, to ascer-tain 
+                that they were not overhead, the two hags 
+                cowered nearer to the fire, and chuckled 
+                heartily</p>
+                  </div>
+                  <div class="card-story">
+                    <div class="card-story__person-box"><img class="card-story__picture" src="/assets/img/users/user-3.png" alt="">
+                      <div class="card-story__name-rank">
+                        <h4 class="card-story__name">lenora sendoval</h4><span class="card-story__rank">Product Manager</span>
+                      </div>
+                    </div>
+                    <p class="card-story__paragraph">This sounded a very good reason, and Alice 
+                was quite pleased to know it. 'I never 
+                thought before !' she said</p>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <footer class="section-footer"> 
+        <div class="container container--place--section-footer"> <a class="logo logo--place--footer" href="#"><img class="logo__icon" src="/assets/img/logo/portland-footer-logo.svg" alt=""></a>
+                <ul class="navigation-list navigation-list--place--section-footer">
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">home</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">shop</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">team</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">about us</a></li>
+                  <li class="navigation-list__item"><a class="navigation-list__link" href="#">contacts</a></li>
+                </ul>
+                <ul class="icon-list">
+                  <li class="icon-list__item"><a class="icon-list__link" href="#">
+                      <object class="icon-list__icon" data="/assets/img/icons/map.svg" type="image/svg+xml"> </object></a></li>
+                  <li class="icon-list__item"><a class="icon-list__link" href="#">
+                      <object class="icon-list__icon" data="/assets/img/icons/map.svg" type="image/svg+xml"> </object></a></li>
+                  <li class="icon-list__item"><a class="icon-list__link" href="#">
+                      <object class="icon-list__icon" data="/assets/img/icons/map.svg" type="image/svg+xml"> </object></a></li>
+                </ul>
+        </div>
+        <div class="container container--place--section-footer"> <span class="section-footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, accusamus! Et deleniti quae voluptas veniam, molestias, tenetur illo odit minima, accusantium nulla qui odio ipsum.</span>
+          <div class="section-footer__copyright"> <a class="section-footer__copyright-link" href="#">privacy policy</a><a class="section-footer__copyright-link" href="#">terms and conditions</a></div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/index.js"> </script>
+  </body>
+</html>

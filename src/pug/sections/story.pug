@@ -1,0 +1,40 @@
+include ../mixins/card_story.pug
+-
+    const storyData = [
+        {
+            pic: 'user-1.png',
+            name: 'cella fields',
+            rank: 'UX Expert',
+            story: `This I have produced as a scantling of Jack's 
+                    great eloquence and the force of his reasoning
+                    upon such abstruse matters`
+        },
+        {
+            pic: 'user-2.png',
+            name: 'alexander lee',
+            rank: 'Founder',
+            story: `Looking for cautiously round, to ascer-tain 
+                    that they were not overhead, the two hags 
+                    cowered nearer to the fire, and chuckled 
+                    heartily`
+        },
+        {
+            pic: 'user-3.png',
+            name: 'lenora sendoval',
+            rank: 'Product Manager',
+            story: `This sounded a very good reason, and Alice 
+                    was quite pleased to know it. 'I never 
+                    thought before !' she said`
+        }
+    ]
+section.section-story
+    .container.container--place--section-story
+        h2.section-story__header
+            span.section-story__header-primary.
+                What Our Customers Have to Say 
+            span.section-story__header-secondary.
+                Couple of Words About This Stories Section
+        .section-story__cards 
+            each item in storyData
+                +cardStory(item)
+    

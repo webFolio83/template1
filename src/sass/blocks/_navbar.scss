@@ -1,0 +1,81 @@
+.navigation-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-size: 1.4rem;
+    height: 100%;
+    .navigation-list__item {
+        height: 100%;
+    }
+
+    @include respond(tab-land) {
+        gap: 2rem;
+        font-size: 1.2rem;
+    }
+    @include respond(phone) {
+        flex-direction: column;
+        gap: .7rem;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        &:link, &:visited {
+            white-space: nowrap;
+            height: 100%;
+            color: currentColor;
+            text-decoration: none;
+            transition: all .3s;
+        }
+
+        &:hover {
+            transform: scale(1.05) translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &--place--section-header {
+        .navigation-list__link {
+            &:hover {
+                color: $nav-color;
+            }
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
+
+    &--place--section-navigation {
+        margin: auto;
+        transform: translateX(3rem);
+        @include respond(phone) {
+            transform: none;
+        }
+
+        .navigation-list__link {
+            &:hover {
+                color: $dark-blue;
+            }
+            &--active {
+                color: $dark-blue !important;
+                font-weight: 800;
+            }
+        }
+    }
+
+    &--place--section-footer {
+        .navigation-list__link {
+            &:hover {
+                color: $nav-color;
+            }
+        }
+    }
+}

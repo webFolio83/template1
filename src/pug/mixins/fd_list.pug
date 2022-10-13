@@ -1,0 +1,7 @@
+mixin fdList (...list)
+    .fd-list
+        .fd-list__active= list[1] 
+            ul.fd-list__list 
+                each item in list 
+                    li.fd-list__item
+                        a(href="#").fd-list__link= item

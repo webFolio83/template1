@@ -1,0 +1,4 @@
+mixin checkBox (id, label, modificator)
+    div(class="check-box check-box" + modificator)
+        input(type="checkbox", name="", id=id).check-box__input
+        label(for=id).check-box__label= label

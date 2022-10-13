@@ -1,0 +1,40 @@
+.section-filter {
+    // grid-column: content-start / content-end;
+    margin-top: $gap-desktop;
+    @include respond(tab-land) {
+        margin-top: $gap-tab-land;
+    }
+
+    @include respond(tab-port) {
+        margin-top: $gap-tab-port;
+    }
+    
+    .fd-menu {    
+        &__title {
+            color: $nav-color;
+        }
+        &__active {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        &:first-child {
+            padding-right: 2rem;
+            border-right: 1px solid $nav-color;
+        }
+
+        &:last-child {
+            padding-left: 2rem;
+            border-left: 1px solid $nav-color;
+        }
+    }
+
+    .word-filter {
+        &__input {
+            max-width: 15rem;
+            @include respond(tab-land) {
+                max-width: 10rem;
+            }
+        }
+    }
+    
+}

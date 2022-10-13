@@ -1,0 +1,36 @@
+.section-pagination {
+    margin-top: $gap-desktop;
+    
+    @include respond(tab-land) {
+        margin-top: $gap-tab-land; 
+    }
+    @include respond(tab-port) {
+        margin-top: $gap-tab-port;
+    }
+
+    .pagination-list {
+        list-style: none;
+        display: flex;     
+        gap: 1.5rem;
+        @include respond(tab-port) {
+            gap: .5rem;
+        }
+        &__link {
+            &:link, &:visited {
+                text-decoration: none;
+                color: currentColor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.6rem;
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                transition: all .3s;
+            }
+            &--active {
+                box-shadow:  0 1rem 2rem rgba(black, .2);
+            }
+        }
+    }
+}

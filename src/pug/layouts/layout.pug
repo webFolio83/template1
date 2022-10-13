@@ -1,0 +1,25 @@
+include ../mixins/product-card
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        title #{title}
+    body 
+        #app 
+            include ../sections/header.pug
+            include ../sections/navigation.pug
+            include ../sections/filter.pug
+            section.section-main
+                .container.container--place--section-main
+                    include ../sections/sidebar.pug
+                    include ../sections/content_cards.pug
+            include ../sections/pagination.pug
+            include ../sections/promo.pug
+            include ../sections/story.pug
+            include ../sections/footer.pug
+        //- include ../blocks/card/card.pug
+        
+        script(src="js/index.js") 

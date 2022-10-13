@@ -1,0 +1,18 @@
+include ../mixins/navbar.pug
+
+- const headerNav = ['Home', 'Devices', 'About', 'Guarantee', 'Delivery & payment'];
+
+header.section-header
+    .container.container--place--section-header
+        a(href="#").logo.logo--place--section-header
+            img(src="/assets/img/logo/portland.svg", alt="").logo__icon
+        +navigation('--place--section-header', ...headerNav)
+        .section-header__info-block
+            .cart 
+                img(src="./assets/img/icons/shopping-cart-icon.svg", alt="Cart", class="cart__icon")
+                span.cart__title.
+                    Cart
+                span.cart__counter.
+                    0
+            .login
+                button.button.button--login Sign in

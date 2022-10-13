@@ -1,0 +1,90 @@
+.section-navigation {
+    // grid-column: 1 / -1;
+    background-color: #fff;
+    border-bottom: 1px solid $divider-color;
+    @include respond(tab-port){
+        padding: 0;
+    }
+
+    &__help-block {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        @include respond(phone){
+            flex-direction: column;
+        }
+    }
+
+    &__support {  
+        height: inherit;
+        padding: 0 1rem;
+        @include respond(tab-port){
+            border-left: 1px solid $divider-color;
+            padding: 0 .5rem;
+        }
+    }
+    &__support-link {
+        display: flex;
+        align-items: center;
+        height: inherit;
+        &:link, &:visited {
+            text-decoration: none;
+            color: $nav-color;
+        }
+        &::before {
+            content: "support";
+            display: block;
+            text-transform: uppercase;
+        }
+        @include respond(tab-port) {
+            &::before {
+                content: "";
+                display: block;
+                width: 2rem;
+                height: 2rem;
+                background: url(assets/img/icons/next-icon.svg) no-repeat;
+                background-position: center;
+            }
+        }
+        @include respond(phone) {
+            &::before {
+                content: "support";
+                display: block;
+                text-transform: uppercase;
+                background: none;
+                width: auto;
+            }
+        }
+    }
+    &__search {
+        border-right: 1px solid $divider-color;
+        border-left: 1px solid $divider-color;
+        color: $blue-gray;
+        display: flex;
+        align-items: center;
+        height: inherit;
+        @include respond(phone) {
+            border: none;
+        }
+    }
+
+    &__search-logo {
+        background: url(assets/img/icons/prev-icon.svg) no-repeat;
+        background-position: center;
+        width: 3rem;
+        height: inherit;
+        padding-left: 1rem;   
+        
+        @include respond(tab-port) {
+            &:hover + .input{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        @include respond(phone) {
+            height: 3rem;
+        }
+    }
+}

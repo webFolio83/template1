@@ -1,0 +1,11 @@
+-
+    const pages = ['1', '2', '3', '4', '5', '6', '7', '8']
+
+section.section-pagination 
+    .container.container--place--section-pagination
+        button.button.button--pagination
+        ul.pagination-list 
+            each item in pages 
+                li.pagination-list__item
+                a.pagination-list__link(href="#")= item
+        button.button.button--pagination

@@ -1,0 +1,7 @@
+mixin card(data)
+    .card 
+        img(src="/assets/img/products/"+ data.pic, alt="").card__picture
+        .card__description
+            h4.card__title= data.title 
+            span.card__color= data.color 
+            span.card__price= data.price

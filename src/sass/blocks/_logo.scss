@@ -1,0 +1,16 @@
+.logo {
+    &:link, &:visited {
+        // background: url(/assets/img/logo/portland.svg) no-repeat;
+        // width: 94px;
+        // height: 27px;
+    }
+
+    &__icon {
+        display: block;
+        max-width: 100%;
+        margin: auto;
+        @include respond(tab-port) {
+            max-width: 80%;
+        }
+    }
+}

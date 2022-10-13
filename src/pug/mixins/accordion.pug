@@ -1,0 +1,12 @@
+mixin accordion(...element)
+    ul.accordion
+        each el, index in element
+            li.accordion__title-box
+            if index == 2
+                a(href="#").accordion__title.accordion__title--active= el.title 
+            else
+                a(href="#").accordion__title= el.title 
+            ul.accordion__list
+                each item in el.list
+                    li.accordion__list-item
+                        a(href="#").accordion__list-link= item

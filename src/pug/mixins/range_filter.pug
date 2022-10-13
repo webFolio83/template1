@@ -1,0 +1,7 @@
+mixin rangeFilter(title, minValue, maxValue)
+    .range-filter
+        span.range-filter__title= title
+        input(type="text", name="min", class="input input--filter input--range-filter", value= minValue)
+        span.range-filter__divider.
+            -
+        input(type="text", name="max", class="input input--filter input--range-filter", value= maxValue)
